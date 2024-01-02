@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Architecture MVVM Provider',
-      initialRoute: RouteNavigation.profiles,
+      initialRoute: RouteNavigation.signIn,
       onGenerateRoute: RouteNavigation.generateRoute,
     );
   }

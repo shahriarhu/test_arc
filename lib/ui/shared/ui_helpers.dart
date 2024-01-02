@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class UIHelper {
-  static double responsiveBigPadding(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double bigPadding(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 16;
@@ -14,9 +13,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveMediumPadding(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double mediumPadding(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 10;
@@ -27,9 +25,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveSmallPadding(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double smallPadding(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 6;
@@ -40,9 +37,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveExtraBigSpacing(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double extraBigSpacing(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 32;
@@ -53,9 +49,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveBigSpacing(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double bigSpacing(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 24;
@@ -66,9 +61,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveMediumSpacing(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double mediumSpacing(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 16;
@@ -79,9 +73,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveSmallSpacing(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double smallSpacing(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 10;
@@ -92,9 +85,8 @@ class UIHelper {
     }
   }
 
-  static double responsiveExtraSmallSpacing(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+  static double extraSmallSpacing(BuildContext context) {
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     if (originalScreenHeight > 800) {
       return 4;
@@ -106,8 +98,7 @@ class UIHelper {
   }
 
   static double deviceHeight(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
+    double originalScreenHeight = MediaQuery.of(context).size.height - (MediaQuery.of(context).padding.top);
 
     return originalScreenHeight;
   }
@@ -116,18 +107,5 @@ class UIHelper {
     double originalScreenWidth = MediaQuery.of(context).size.width;
 
     return originalScreenWidth;
-  }
-
-  static double responsiveText(BuildContext context) {
-    double originalScreenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top);
-
-    if (originalScreenHeight > 800) {
-      return 22;
-    } else if (800 >= originalScreenHeight && originalScreenHeight > 650) {
-      return 20;
-    } else {
-      return 18;
-    }
   }
 }

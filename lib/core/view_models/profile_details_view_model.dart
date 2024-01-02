@@ -9,7 +9,7 @@ class ProfileDetailsViewModel extends BaseViewModel {
   Future<void> getProfile() async {
     setViewState(ViewState.busy);
 
-    _profileAPI.getProfilesAPI();
+    await _profileAPI.getProfilesAPI();
 
     setViewState(ViewState.idle);
   }

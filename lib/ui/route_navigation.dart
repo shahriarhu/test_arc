@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_arc/ui/views/profile_details_view.dart';
 import 'package:test_arc/ui/views/profiles_view.dart';
+import 'package:test_arc/ui/views/sign_in_view.dart';
 
 class RouteNavigation {
   static const String signIn = 'signIn';
@@ -9,8 +10,8 @@ class RouteNavigation {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case signIn:
-      //   return MaterialPageRoute(builder: (context) => SignInView());
+      case signIn:
+        return MaterialPageRoute(builder: (context) => const SignInView());
       case profiles:
         return MaterialPageRoute(builder: (context) => const ProfileView());
       case profileDetails:
