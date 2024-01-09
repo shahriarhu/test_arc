@@ -15,20 +15,24 @@ class SignInViewModel extends BaseViewModel {
 
   final AuthenticationAPI _authenticationAPI = locator<AuthenticationAPI>();
 
-  Future<bool>? signIn() async {
-    setViewState(ViewState.busy);
+  Future<bool> signIn() async {
+    try {
+      setViewState(ViewState.busy);
 
-    int returnedValue = await _authenticationAPI.signInAPI(mobileNumberController.text, passwordController.text);
+      int returnedValue = await _authenticationAPI.signInAPI(mobileNumberController.text, passwordController.text);
 
-    setViewState(ViewState.idle);
+      setViewState(ViewState.idle);
+
+      return returnedValue == 201 ? true : false;
+    } catch (e) {
+      return false;
+    }
 
     // if (returnedValue == 201) {
     //   return true;
     // } else {
     //   return false;
     // }
-
-    return returnedValue == 201 ? true : false;
   }
 
   // Future<void>? signIn(String mobileNumber, String password) {
@@ -59,5 +63,30 @@ class SignInViewModel extends BaseViewModel {
     }
 
     return null;
+  }
+
+  /// b = 4
+  String myFunc(int b) {
+    int a = 5;
+
+    /// SomeCode
+
+    if (a == b) {
+      /// SomeCode
+
+      return '';
+    } else if (a > b) {
+      /// SomeCode
+
+      return '';
+    } else {
+      /// SomeCode
+
+      return '';
+    }
+
+    /// Common SomeCode
+    String s = 'd';
+    return '';
   }
 }

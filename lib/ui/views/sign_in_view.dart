@@ -37,8 +37,10 @@ class SignInView extends StatelessWidget {
                     ? ElevatedButton(
                         onPressed: () async {
                           if (model.formKey.currentState!.validate()) {
-                            if (await model.signIn()!) {
-                              Navigator.pushNamed(context, RouteNavigation.profiles);
+                            if (await model.signIn()) {
+                              if (context.mounted) {
+                                Navigator.pushNamed(context, RouteNavigation.profiles);
+                              }
                             }
                           }
                         },
